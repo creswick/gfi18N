@@ -56,7 +56,7 @@ generatePGF _ flags = do
     createDirectoryIfMissing True autogenDir
     notice verbosity "Running PGF build"
 
-    setCurrentDirectory "gf"
+    setCurrentDirectory gfSrcDir
     gfExe <- gfExecutable
     setCurrentDirectory autogenDir
 
