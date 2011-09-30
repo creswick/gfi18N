@@ -1,0 +1,25 @@
+Name:          gfI8N-example
+Version:       0.0.0.1
+Synopsis:      Trivial example of using GF for internationalization
+Description:   A simple haskell program that uses the Foods grammar
+               to demonstrate simple internationalization.
+License:       BSD3
+License-file:  LICENSE
+Author:        Rogan Creswick
+Maintainer:    creswick@gmail.com
+Copyright:     Rogan Creswick, 2011
+Category:      Tools
+Build-type:    Custom
+Cabal-version: >=1.8
+
+Data-files:
+  dist/build/autogen/Foods.pgf
+
+Executable foods-i8n
+  HS-Source-Dirs: src/haskell
+  Main-is:        Main.hs
+  GHC-Options:    -Wall
+
+  Build-depends:
+     base >= 4 && <= 5,
+     gf >= 3.2.9
