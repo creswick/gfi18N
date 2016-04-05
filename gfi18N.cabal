@@ -1,4 +1,4 @@
-Name:          gfI8N-example
+Name:          gfi18N-example
 Version:       0.0.0.1
 Synopsis:      Trivial example of using GF for internationalization
 Description:   A simple haskell program that uses the Foods grammar
@@ -15,7 +15,7 @@ Cabal-version: >=1.8
 Data-files:
   dist/build/autogen/Foods.pgf
 
-Executable foods-i8n
+Executable foods-i18n
   HS-Source-Dirs: src/haskell
   Main-is:        Main.hs
   GHC-Options:    -Wall
