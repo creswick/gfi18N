@@ -63,7 +63,7 @@ generatePGF _ flags = do
     -- create the PGF files:
     rawSystemExit verbosity gfExe $
                      [ "--make"
-                     , "--no-emit-gfo"
+--                     , "--no-emit-gfo"
                      , "--gfo-dir="++autogenDir
                      ] ++ [ gfSrcDir </> (profileName ++ f ++ ".gf") |
                                 f <- profileFlavors
@@ -71,9 +71,9 @@ generatePGF _ flags = do
 
     -- generate the haskell:
     rawSystemExit verbosity gfExe [ "--batch"
-                                  , "--no-emit-gfo"
+--                                  , "--no-emit-gfo"
                                   , "--output-format=haskell"
-                                  , "--output-dir="++autogenDir
+                                  , "--output-dir=." -- ++autogenDir
                                   , profileName++".pgf"  -- hmm
                                   ]
     setCurrentDirectory orig

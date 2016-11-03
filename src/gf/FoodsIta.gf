@@ -1,12 +1,12 @@
 concrete FoodsIta of Foods = open ResIta in {
   lincat
-    Comment = {s : Str} ; 
-    Quality = Adjective ; 
-    Kind = Noun ; 
+    Comment = {s : Str} ;
+    Quality = Adjective ;
+    Kind = Noun ;
     Item = NounPhrase ;
   lin
-    Pred item quality = 
-      {s = item.s ++ copula ! item.n ++ 
+    Pred item quality =
+      {s = item.s ++ copula ! item.n ++
            quality.s ! item.g ! item.n} ;
     This  = det Sg "questo" "questa" ;
     That  = det Sg "quel"   "quella" ;
@@ -21,7 +21,7 @@ concrete FoodsIta of Foods = open ResIta in {
     Fish = noun "pesce" "pesci" Masc ;
     Pizza = noun "pizza" "pizze" Fem ;
     Very qual = {s = \\g,n => "molto" ++ qual.s ! g ! n} ;
-    Fresh = 
+    Fresh =
       adjective "fresco" "fresca" "freschi" "fresche" ;
     Warm = regAdj "caldo" ;
     Italian = regAdj "italiano" ;
